@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text — Hina Niside</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1a1a; --paper:#ffffff; --line:#dcdcdc; --muted:#9a9a9a; --note:#b9761f;
+    --ph:repeating-linear-gradient(135deg,#e9e9e9,#e9e9e9 10px,#f4f4f4 10px,#f4f4f4 20px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:'Zen Kaku Gothic New',sans-serif; font-weight:300; line-height:1.8;}
+  .serif{font-family:'Zen Old Mincho', serif; font-weight:500;}
+  a{color:inherit;}
+  .note{display:inline-block; font-size:12px; color:var(--note); border:1px dashed var(--note);
+        padding:3px 10px; margin:18px 32px 0; background:#fffaf2;}
+  .pagetag{position:fixed; bottom:16px; right:16px; font-size:11px; color:var(--muted);
+        border:1px solid var(--line); padding:3px 9px; background:rgba(255,255,255,.9); z-index:30;}
+
+  header{position:fixed; top:0; left:0; right:0; z-index:20; display:flex; align-items:center;
+        justify-content:space-between; padding:22px 32px; mix-blend-mode:difference; color:#fff;}
+  header .logo{font-size:15px; letter-spacing:.08em; text-decoration:none;}
+  header nav{display:flex; gap:28px; font-size:13px;}
+  header nav a{text-decoration:none; opacity:.7;}
+  header nav a.active{opacity:1; border-bottom:1px solid currentColor;}
+  header nav a:hover{opacity:1;}
+
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+
+  footer{padding:40px 32px; text-align:center; font-size:11px; color:var(--muted); border-top:1px solid var(--line);}
+
+  @media (max-width:760px){ header nav{gap:16px; font-size:11px;} }
+
+  #textlist{padding:120px 0 100px;}
+  #textlist h2{font-size:22px; margin-bottom:32px;}
+  .t-row{display:flex; gap:32px; padding:22px 0; border-top:1px solid var(--line); font-size:14px;}
+  .t-row:last-child{border-bottom:1px solid var(--line);}
+  .t-row .date{color:var(--muted); width:90px; flex-shrink:0;}
+
+</style>
+</head>
+<body>
+<span class="pagetag">TEXT</span>
+<header>
+  <a class="logo serif" href="index.html">HINA NISIDE</a>
+  <nav>
+    <a href="index.html" class="">Home</a>
+    <a href="works.html" class="">Works</a>
+    <a href="text.html" class="active">Text</a>
+    <a href="about.html" class="">About</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+</header>
+
+<!-- <div class="note">03 · TEXT — Same grammar as Hamada's Text section. Reading content such as interviews and statements.</div> -->
+<div class="wrap" id="textlist">
+  <h2 class="serif">Text</h2>
+  <div class="t-row"><div class="date">2026.07</div><div>Placeholder for an interview / article title.</div></div>
+  <div class="t-row"><div class="date">2026.02</div><div>Placeholder for an interview / article title.</div></div>
+  <div class="t-row"><div class="date">2025.11</div><div>Placeholder for an interview / article title.</div></div>
+</div>
+
+<footer>© 2026 Hina Niside</footer>
+</body>
+</html>
