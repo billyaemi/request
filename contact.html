@@ -1,154 +1,112 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Hina Niside</title>
+<title data-ja="お問い合わせ — Hina Niside" data-en="Contact — Hina Niside">お問い合わせ — Hina Niside</title>
+<meta name="description" content="Hina Niside（西出 妃那）への作曲・音楽制作のご依頼、お問い合わせ。">
+<link rel="icon" href="img/favicon_3.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#42495c; --paper:#ffffff; --line:#dde0e6; --muted:#8a90a0; --note:#b9761f;
-    --accent:#fefac2;
-    --ph:repeating-linear-gradient(135deg,#e9e9e9,#e9e9e9 10px,#f4f4f4 10px,#f4f4f4 20px);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--paper); color:var(--ink); font-family:'Zen Kaku Gothic New',sans-serif; font-weight:300; line-height:1.8;}
-  .serif{font-family:'Zen Old Mincho', serif; font-weight:500;}
-  a{color:inherit;}
-  .note{display:inline-block; font-size:12px; color:var(--note); border:1px dashed var(--note);
-        padding:3px 10px; margin:18px 32px 0; background:#fffaf2;}
-  .pagetag{position:fixed; bottom:16px; right:16px; font-size:11px; color:var(--muted);
-        border:1px solid var(--line); padding:3px 9px; background:rgba(255,255,255,.9); z-index:30;}
-
-  header{position:fixed; top:0; left:0; right:0; z-index:20; display:flex; align-items:center;
-        justify-content:space-between; padding:22px 32px; color:var(--ink);}
-  header .logo{font-size:15px; letter-spacing:.08em; text-decoration:none;}
-  header nav{display:flex; gap:28px; font-size:13px;}
-  header nav a{text-decoration:none; opacity:.7;}
-  header nav a.active{opacity:1; border-bottom:2px solid var(--accent);}
-  header nav a:hover{opacity:1; border-bottom:2px solid var(--accent);}
-
-  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
-
-  footer{padding:40px 32px; text-align:center; font-size:11px; color:var(--muted); border-top:1px solid var(--line);}
-
-  @media (max-width:760px){ header nav{gap:16px; font-size:11px;} }
-
-  #contact .wrap{padding-top:140px; padding-bottom:120px; max-width:720px;}
-  #contact h2{font-size:22px; margin-bottom:16px;}
-  #contact .intro{font-size:14px; color:var(--muted); margin-bottom:48px; max-width:46em;}
-  form{display:flex; flex-direction:column; gap:26px;}
-  .field{display:flex; flex-direction:column; gap:8px;}
-  .field label{font-size:13px; color:#444;}
-  .field label .req{color:var(--note); margin-left:4px;}
-  .field input, .field textarea{
-    border:none; border-bottom:1px solid var(--line); background:transparent;
-    font-family:inherit; font-size:14px; padding:8px 2px; color:var(--ink);
-    outline:none;
-  }
-  .field input:focus, .field textarea:focus{border-bottom-color:var(--ink);}
-  .field textarea{resize:vertical; min-height:96px;}
-  .row2{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  .file-btn{border:1px solid var(--line); padding:10px 16px; font-size:13px; color:var(--muted);
-      width:fit-content; cursor:pointer;}
-  .foot-notes{font-size:12px; color:var(--muted); margin-top:8px; line-height:1.9;}
-  .submit-btn{margin-top:12px; border:1px solid var(--ink); background:var(--ink); color:var(--accent);
-      font-family:inherit; font-size:13px; letter-spacing:.05em; padding:14px 32px;
-      width:fit-content; cursor:pointer; transition:background .2s, color .2s;}
-  .submit-btn:hover{background:var(--accent); color:var(--ink);}
-  @media (max-width:760px){ .row2{grid-template-columns:1fr;} }
-
-
-  h2.serif{position:relative; padding-left:20px;}
-  h2.serif::before{content:""; position:absolute; left:0; top:50%; transform:translateY(-50%);
-      width:10px; height:10px; background:var(--accent);}
-</style>
+<link rel="stylesheet" href="css/style.css">
+<script>
+  (function(){var l='ja',m=location.search.match(/[?&]lang=(ja|en)/);
+  try{if(m){l=m[1];}else{var s=localStorage.getItem('lang');if(s==='en'||s==='ja'){l=s;}}}catch(e){if(m){l=m[1];}}
+  document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;})();
+</script>
 </head>
 <body>
-<span class="pagetag">CONTACT</span>
+
 <header>
   <a class="logo serif" href="index.html">HINA NISIDE</a>
-  <nav>
-    <a href="index.html" class="">Home</a>
-    <a href="works.html" class="">Works</a>
-    <a href="text.html" class="">Text</a>
-    <a href="about.html" class="">About</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
+  <div class="hd-right">
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="ja" aria-pressed="true">JA</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
 </header>
 
-<!-- <div class="note">05 · CONTACT — Rebuilt as an inquiry form, referencing hideakihamada.com/contact. Fields adapted from a shoot-commission form to a music-commission one.</div> -->
-<section id="contact"><div class="wrap">
-  <h2 class="serif">Contact</h2>
-  <!-- <p class="intro">For commissions, performances, and licensing inquiries, please fill out the form below. Replies typically take 3 days to a week.</p> -->
+<main>
+  <section id="contact">
+    <div class="wrap">
+      <h1 class="page-title serif"><span class="hl"><span class="t-ja">お問い合わせ</span><span class="t-en">Contact</span></span></h1>
+      <p class="intro">
+        <span class="t-ja">作曲・音楽制作のご依頼やご相談は、こちらのフォームよりお送りください。</span>
+        <span class="t-en">For commissions and inquiries about composition or music production, please use the form below.</span>
+      </p>
 
-  <form>
-    <div class="field">
-      <label>Name <span class="req">*</span></label>
-      <input type="text">
-    </div>
-    <div class="field">
-      <label>Organization</label>
-      <input type="text">
-    </div>
-    <div class="row2">
-      <div class="field">
-        <label>Phone <span class="req">*</span></label>
-        <input type="tel">
-      </div>
-      <div class="field">
-        <label>Website</label>
-        <input type="url">
-      </div>
-    </div>
-    <div class="row2">
-      <div class="field">
-        <label>Email <span class="req">*</span></label>
-        <input type="email">
-      </div>
-      <div class="field">
-        <label>Email (confirm) <span class="req">*</span></label>
-        <input type="email">
-      </div>
-    </div>
-    <div class="field">
-      <label>Project name</label>
-      <input type="text">
-    </div>
-    <div class="row2">
-      <div class="field">
-        <label>Date needed by <span class="req">*</span></label>
-        <input type="text" placeholder="e.g. recording / performance date">
-      </div>
-      <div class="field">
-        <label>Delivery deadline <span class="req">*</span></label>
-        <input type="text">
-      </div>
-    </div>
-    <div class="field">
-      <label>Budget <span class="req">*</span></label>
-      <input type="text">
-    </div>
-    <div class="field">
-      <label>Project details <span class="req">*</span></label>
-      <textarea></textarea>
-    </div>
-    <div class="field">
-      <label>Attachment</label>
-      <div class="file-btn">Choose file (up to 100MB)</div>
-    </div>
+      <!-- Formspree: replace YOUR_FORM_ID with the ID issued at https://formspree.io -->
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="field">
+          <label for="f-name"><span class="t-ja">お名前</span><span class="t-en">Name</span><span class="req">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-org"><span class="t-ja">ご所属</span><span class="t-en">Organization</span></label>
+          <input id="f-org" name="organization" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="f-email"><span class="t-ja">メールアドレス</span><span class="t-en">Email</span><span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-type"><span class="t-ja">ご依頼の種類</span><span class="t-en">Type of request</span></label>
+          <select id="f-type" name="type">
+            <option value="" data-ja="選択してください" data-en="Select one">選択してください</option>
+            <option value="Screen / incidental music" data-ja="劇伴音楽" data-en="Screen &amp; incidental music">劇伴音楽</option>
+            <option value="Pop" data-ja="ポップス" data-en="Pop">ポップス</option>
+            <option value="Classical" data-ja="クラシック（室内楽・オーケストラ等）" data-en="Classical (chamber, orchestra, etc.)">クラシック（室内楽・オーケストラ等）</option>
+            <option value="Mixing" data-ja="MIX" data-en="Mixing">MIX</option>
+            <option value="Score engraving" data-ja="譜面制作" data-en="Score engraving">譜面制作</option>
+            <option value="Other" data-ja="その他" data-en="Other">その他</option>
+          </select>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="f-date"><span class="t-ja">ご希望の納期</span><span class="t-en">Desired deadline</span></label>
+            <input id="f-date" name="deadline" type="text">
+          </div>
+          <div class="field">
+            <label for="f-budget"><span class="t-ja">ご予算</span><span class="t-en">Budget</span></label>
+            <input id="f-budget" name="budget" type="text">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-body"><span class="t-ja">ご依頼内容</span><span class="t-en">Details</span><span class="req">*</span></label>
+          <textarea id="f-body" name="message" required></textarea>
+        </div>
 
-    <div class="foot-notes">
-      — Any additional costs (studio time, travel, etc.) will be quoted separately.<br>
-      — This form will be protected by reCAPTCHA; Google's Privacy Policy and Terms of Service apply.
-    </div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-    <button type="button" class="submit-btn">Send</button>
-  </form>
-</div></section>
+        <div id="msg-ok" class="form-msg ok" role="status" hidden>
+          <span class="t-ja">お問い合わせありがとうございます。送信が完了しました。</span>
+          <span class="t-en">Thank you for your message. It has been sent.</span>
+        </div>
+        <div id="msg-err" class="form-msg" role="alert" hidden>
+          <span class="t-ja">送信に失敗しました。時間をおいて、もう一度お試しください。</span>
+          <span class="t-en">The message could not be sent. Please try again later.</span>
+        </div>
+        <div id="msg-setup" class="form-msg" role="alert" hidden>
+          <span class="t-ja">送信先の設定がまだ完了していません（制作用メッセージ）。</span>
+          <span class="t-en">The form's destination is not set up yet (development message).</span>
+        </div>
+
+        <button type="submit" class="submit-btn"><span class="t-ja">送信する</span><span class="t-en">Send</span></button>
+      </form>
+    </div>
+  </section>
+</main>
 
 <footer>© 2026 Hina Niside</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,90 +1,140 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Works — Hina Niside</title>
+<title data-ja="作品 — Hina Niside" data-en="Works — Hina Niside">作品 — Hina Niside</title>
+<meta name="description" content="Hina Niside（西出 妃那）の作品一覧。映像音楽、クラシック作品。">
+<link rel="icon" href="img/favicon_3.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#42495c; --paper:#ffffff; --line:#dde0e6; --muted:#8a90a0; --note:#b9761f;
-    --accent:#fefac2;
-    --ph:repeating-linear-gradient(135deg,#e9e9e9,#e9e9e9 10px,#f4f4f4 10px,#f4f4f4 20px);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--paper); color:var(--ink); font-family:'Zen Kaku Gothic New',sans-serif; font-weight:300; line-height:1.8;}
-  .serif{font-family:'Zen Old Mincho', serif; font-weight:500;}
-  a{color:inherit;}
-  .note{display:inline-block; font-size:12px; color:var(--note); border:1px dashed var(--note);
-        padding:3px 10px; margin:18px 32px 0; background:#fffaf2;}
-  .pagetag{position:fixed; bottom:16px; right:16px; font-size:11px; color:var(--muted);
-        border:1px solid var(--line); padding:3px 9px; background:rgba(255,255,255,.9); z-index:30;}
-
-  header{position:fixed; top:0; left:0; right:0; z-index:20; display:flex; align-items:center;
-        justify-content:space-between; padding:22px 32px; color:var(--ink);}
-  header .logo{font-size:15px; letter-spacing:.08em; text-decoration:none;}
-  header nav{display:flex; gap:28px; font-size:13px;}
-  header nav a{text-decoration:none; opacity:.7;}
-  header nav a.active{opacity:1; border-bottom:2px solid var(--accent);}
-  header nav a:hover{opacity:1; border-bottom:2px solid var(--accent);}
-
-  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
-
-  footer{padding:40px 32px; text-align:center; font-size:11px; color:var(--muted); border-top:1px solid var(--line);}
-
-  @media (max-width:760px){ header nav{gap:16px; font-size:11px;} }
-
-  #grid{padding-top:96px;}
-  .g{display:grid; grid-template-columns:repeat(3,1fr); gap:2px;}
-  .g .cell{aspect-ratio:16/10; background:var(--ph); position:relative; overflow:hidden;
-      transition:box-shadow .2s;}
-  .g .cell:hover{box-shadow:inset 0 0 0 2px var(--accent);}
-  .g .cell .cap{position:absolute; left:0; right:0; bottom:0; padding:16px;
-      background:linear-gradient(transparent, rgba(66,73,92,.7)); color:#fff;
-      opacity:0; transition:opacity .3s; font-size:13px;}
-  .g .cell:hover .cap{opacity:1;}
-  @media (max-width:760px){ .g{grid-template-columns:1fr;} }
-
-  #archive-head{padding:120px 0 24px;}
-  #archive-head h2{font-size:22px;}
-
-
-  h2.serif{position:relative; padding-left:20px;}
-  h2.serif::before{content:""; position:absolute; left:0; top:50%; transform:translateY(-50%);
-      width:10px; height:10px; background:var(--accent);}
-</style>
+<link rel="stylesheet" href="css/style.css">
+<script>
+  (function(){var l='ja',m=location.search.match(/[?&]lang=(ja|en)/);
+  try{if(m){l=m[1];}else{var s=localStorage.getItem('lang');if(s==='en'||s==='ja'){l=s;}}}catch(e){if(m){l=m[1];}}
+  document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;})();
+</script>
 </head>
 <body>
-<span class="pagetag">WORKS</span>
+
 <header>
   <a class="logo serif" href="index.html">HINA NISIDE</a>
-  <nav>
-    <a href="index.html" class="">Home</a>
-    <a href="works.html" class="active">Works</a>
-    <a href="text.html" class="">Text</a>
-    <a href="about.html" class="">About</a>
-    <a href="contact.html" class="">Contact</a>
-  </nav>
+  <div class="hd-right">
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="works.html" aria-current="page">Works</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="ja" aria-pressed="true">JA</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
 </header>
 
-<!-- <div class="note">02 · WORKS — Full archive using the same grid grammar as Home. Year/category filters to be considered later.</div> -->
-<div class="wrap" id="archive-head"><h2 class="serif">Works</h2></div>
-<section id="grid">
-  <div class="g">
-    <div class="cell"><div class="cap">Track Title, 2026</div></div>
-    <div class="cell"><div class="cap">Track Title, 2025</div></div>
-    <div class="cell"><div class="cap">Track Title, 2025</div></div>
-    <div class="cell"><div class="cap">Track Title, 2024</div></div>
-    <div class="cell"><div class="cap">Track Title, 2024</div></div>
-    <div class="cell"><div class="cap">Track Title, 2023</div></div>
-    <div class="cell"><div class="cap">Track Title, 2023</div></div>
-    <div class="cell"><div class="cap">Track Title, 2022</div></div>
-    <div class="cell"><div class="cap">Track Title, 2021</div></div>
-  </div>
-</section>
+<main>
+  <section id="works">
+    <div class="wrap">
+      <h1 class="page-title serif"><span class="hl"><span class="t-ja">作品</span><span class="t-en">Works</span></span></h1>
+      <div class="g">
+        <button class="cell poster" type="button" data-img="img/works/fafner.jpg">
+          <img src="img/works/fafner.jpg" loading="lazy"
+               data-alt-ja="蒼穹のファフナー Symphony Orchestra Concert 2026" data-alt-en="Fafner in the Azure Symphony Orchestra Concert 2026" alt="蒼穹のファフナー Symphony Orchestra Concert 2026">
+          <span class="cap">蒼穹のファフナー Symphony Orchestra Concert 2026</span>
+        </button>
+        <button class="cell poster" type="button" data-img="img/works/defonima.jpg">
+          <img src="img/works/defonima.jpg" loading="lazy"
+               data-alt-ja="デフォニマ" data-alt-en="Defonima" alt="デフォニマ">
+          <span class="cap">Defonima / デフォニマ</span>
+        </button>
+        <button class="cell yt" type="button" data-yt="ErIuyZueXoM" data-start="1800">
+          <img src="https://i.ytimg.com/vi/ErIuyZueXoM/hqdefault.jpg" loading="lazy" alt="">
+          <span class="cap"><span class="t-ja">クラシック作品 01</span><span class="t-en">Classical work 01</span></span>
+        </button>
+        <button class="cell yt" type="button" data-yt="0Axq09tgttU">
+          <img src="https://i.ytimg.com/vi/0Axq09tgttU/hqdefault.jpg" loading="lazy" alt="">
+          <span class="cap"><span class="t-ja">クラシック作品 02</span><span class="t-en">Classical work 02</span></span>
+        </button>
+        <button class="cell yt" type="button" data-yt="1iM3igab8Vk">
+          <img src="https://i.ytimg.com/vi/1iM3igab8Vk/hqdefault.jpg" loading="lazy" alt="">
+          <span class="cap"><span class="t-ja">クラシック作品 03</span><span class="t-en">Classical work 03</span></span>
+        </button>
+        <button class="cell yt" type="button" data-yt="B35cnwf27sc">
+          <img src="https://i.ytimg.com/vi/B35cnwf27sc/hqdefault.jpg" loading="lazy" alt="">
+          <span class="cap"><span class="t-ja">クラシック作品 04</span><span class="t-en">Classical work 04</span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="listen">
+    <div class="wrap">
+      <h2 class="sec-title serif"><span class="hl">Listen</span></h2>
+      <div class="acc open"><button type="button" class="acc-h" aria-expanded="true"><span class="an">Eclipse / Chamber</span><em>2</em><i></i></button><div class="acc-b"><div class="acc-in"><ol class="tracks">
+        <li class="track" data-src="audio/eclipse.mp3"><button type="button" class="tp" aria-label="Play “Eclipse” pour Violoncelle et Piano"><span class="ic"></span></button><span class="tt">“Eclipse” pour Violoncelle et Piano <small>Cello & Piano</small></span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/eclipse2.mp3"><button type="button" class="tp" aria-label="Play “Eclipse II”"><span class="ic"></span></button><span class="tt">“Eclipse II” <small>Chamber Orchestra</small></span><span class="wf"></span><span class="tm">0:00</span></li>
+      </ol></div></div></div>
+      <div class="acc"><button type="button" class="acc-h" aria-expanded="false"><span class="an">Screen Music — A</span><em>5</em><i></i></button><div class="acc-b" inert><div class="acc-in"><ol class="tracks">
+        <li class="track" data-src="audio/a-m04.mp3"><button type="button" class="tp" aria-label="Play A_M4"><span class="ic"></span></button><span class="tt">A_M4</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/a-m06.mp3"><button type="button" class="tp" aria-label="Play A_M6"><span class="ic"></span></button><span class="tt">A_M6</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/a-m07.mp3"><button type="button" class="tp" aria-label="Play A_M7"><span class="ic"></span></button><span class="tt">A_M7</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/a-m09.mp3"><button type="button" class="tp" aria-label="Play A_M9"><span class="ic"></span></button><span class="tt">A_M9</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/a-m14.mp3"><button type="button" class="tp" aria-label="Play A_M14"><span class="ic"></span></button><span class="tt">A_M14</span><span class="wf"></span><span class="tm">0:00</span></li>
+      </ol></div></div></div>
+      <div class="acc"><button type="button" class="acc-h" aria-expanded="false"><span class="an">Screen Music — O</span><em>5</em><i></i></button><div class="acc-b" inert><div class="acc-in"><ol class="tracks">
+        <li class="track" data-src="audio/o-m02.mp3"><button type="button" class="tp" aria-label="Play O_M2"><span class="ic"></span></button><span class="tt">O_M2</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/o-m03.mp3"><button type="button" class="tp" aria-label="Play O_M3"><span class="ic"></span></button><span class="tt">O_M3</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/o-m08.mp3"><button type="button" class="tp" aria-label="Play O_M8"><span class="ic"></span></button><span class="tt">O_M8</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/o-m09.mp3"><button type="button" class="tp" aria-label="Play O_M9"><span class="ic"></span></button><span class="tt">O_M9</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/o-m10.mp3"><button type="button" class="tp" aria-label="Play O_M10"><span class="ic"></span></button><span class="tt">O_M10</span><span class="wf"></span><span class="tm">0:00</span></li>
+      </ol></div></div></div>
+      <div class="acc"><button type="button" class="acc-h" aria-expanded="false"><span class="an">Screen Music — Other</span><em>3</em><i></i></button><div class="acc-b" inert><div class="acc-in"><ol class="tracks">
+        <li class="track" data-src="audio/akebono-m03.mp3"><button type="button" class="tp" aria-label="Play M3 (Akebono)"><span class="ic"></span></button><span class="tt">M3 (Akebono)</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/ima-m11.mp3"><button type="button" class="tp" aria-label="Play M11 (Okyakusama)"><span class="ic"></span></button><span class="tt">M11 (Okyakusama)</span><span class="wf"></span><span class="tm">0:00</span></li>
+        <li class="track" data-src="audio/pv-tera.mp3"><button type="button" class="tp" aria-label="Play Tera (PV)"><span class="ic"></span></button><span class="tt">Tera (PV)</span><span class="wf"></span><span class="tm">0:00</span></li>
+      </ol></div></div></div>
+    </div>
+  </section>
+
+  <section id="scores">
+    <div class="wrap">
+      <h2 class="sec-title serif"><span class="hl"><span class="t-ja">室内楽・管弦楽作品</span><span class="t-en">Chamber &amp; Orchestral Works</span></span></h2>
+      <div class="rows">
+        <div class="row">
+          <div class="k"><span class="t-ja">木管五重奏</span><span class="t-en">Woodwind quintet</span></div>
+          <div class="v">Quatre Mouvements <span class="t-ja">〜木管五重奏のための〜</span><span class="t-en">— for Woodwind Quintet</span></div>
+        </div>
+        <div class="row">
+          <div class="k"><span class="t-ja">チェロとピアノ</span><span class="t-en">Cello &amp; piano</span></div>
+          <div class="v">“Eclipse” pour Violoncelle et Piano</div>
+        </div>
+        <div class="row">
+          <div class="k"><span class="t-ja">室内オーケストラ</span><span class="t-en">Chamber orchestra</span></div>
+          <div class="v">“Eclipse II” pour orchestre de chambre</div>
+        </div>
+        <div class="row">
+          <div class="k"><span class="t-ja">ピアノ三重奏</span><span class="t-en">Piano trio</span></div>
+          <div class="v"><span class="t-ja">ピアノ三重奏のためのソナタ</span><span class="t-en">Sonata for Piano Trio</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="np" aria-live="polite">
+  <button type="button" class="np-prev" aria-label="Previous"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 1h2v12H2zM13 1v12L5 7z" fill="currentColor"/></svg></button>
+  <button type="button" class="np-play" aria-label="Play/Pause"><span class="ic"></span></button>
+  <button type="button" class="np-next" aria-label="Next"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M10 1h2v12h-2zM1 1v12l8-6z" fill="currentColor"/></svg></button>
+  <span class="np-title"></span>
+  <span class="np-wf"></span>
+  <span class="np-time">0:00 / 0:00</span>
+</div>
 
 <footer>© 2026 Hina Niside</footer>
+
+<script src="js/peaks.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

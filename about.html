@@ -1,80 +1,115 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About — Hina Niside</title>
+<title data-ja="プロフィール — Hina Niside" data-en="About — Hina Niside">プロフィール — Hina Niside</title>
+<meta name="description" content="作曲家 Hina Niside（西出 妃那）のプロフィール。桐朋学園大学作曲科在学。劇伴作曲家として活動。">
+<link rel="icon" href="img/favicon_3.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#42495c; --paper:#ffffff; --line:#dde0e6; --muted:#8a90a0; --note:#b9761f;
-    --accent:#fefac2;
-    --ph:repeating-linear-gradient(135deg,#e9e9e9,#e9e9e9 10px,#f4f4f4 10px,#f4f4f4 20px);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--paper); color:var(--ink); font-family:'Zen Kaku Gothic New',sans-serif; font-weight:300; line-height:1.8;}
-  .serif{font-family:'Zen Old Mincho', serif; font-weight:500;}
-  a{color:inherit;}
-  .note{display:inline-block; font-size:12px; color:var(--note); border:1px dashed var(--note);
-        padding:3px 10px; margin:18px 32px 0; background:#fffaf2;}
-  .pagetag{position:fixed; bottom:16px; right:16px; font-size:11px; color:var(--muted);
-        border:1px solid var(--line); padding:3px 9px; background:rgba(255,255,255,.9); z-index:30;}
-
-  header{position:fixed; top:0; left:0; right:0; z-index:20; display:flex; align-items:center;
-        justify-content:space-between; padding:22px 32px; color:var(--ink);}
-  header .logo{font-size:15px; letter-spacing:.08em; text-decoration:none;}
-  header nav{display:flex; gap:28px; font-size:13px;}
-  header nav a{text-decoration:none; opacity:.7;}
-  header nav a.active{opacity:1; border-bottom:2px solid var(--accent);}
-  header nav a:hover{opacity:1; border-bottom:2px solid var(--accent);}
-
-  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
-
-  footer{padding:40px 32px; text-align:center; font-size:11px; color:var(--muted); border-top:1px solid var(--line);}
-
-  @media (max-width:760px){ header nav{gap:16px; font-size:11px;} }
-
-  #about .wrap{padding-top:120px; padding-bottom:100px; display:grid;
-      grid-template-columns:0.9fr 1.1fr; gap:72px; align-items:start;}
-  #about .portrait{aspect-ratio:3/4; background:var(--ph); display:flex; align-items:center;
-      justify-content:center; font-size:12px; color:var(--muted); border-bottom:4px solid var(--accent);
-      overflow:hidden;}
-  #about .portrait img{width:100%; height:100%; object-fit:cover; display:block;}
-  #about h2{font-size:22px; margin-bottom:24px;}
-  #about p{font-size:14.5px; color:#444; max-width:46em; margin-bottom:16px;}
-  @media (max-width:760px){ #about .wrap{grid-template-columns:1fr;} }
-
-
-  h2.serif{position:relative; padding-left:20px;}
-  h2.serif::before{content:""; position:absolute; left:0; top:50%; transform:translateY(-50%);
-      width:10px; height:10px; background:var(--accent);}
-</style>
+<link rel="stylesheet" href="css/style.css">
+<script>
+  (function(){var l='ja',m=location.search.match(/[?&]lang=(ja|en)/);
+  try{if(m){l=m[1];}else{var s=localStorage.getItem('lang');if(s==='en'||s==='ja'){l=s;}}}catch(e){if(m){l=m[1];}}
+  document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;})();
+</script>
 </head>
 <body>
-<span class="pagetag">ABOUT</span>
+
 <header>
   <a class="logo serif" href="index.html">HINA NISIDE</a>
-  <nav>
-    <a href="index.html" class="">Home</a>
-    <a href="works.html" class="">Works</a>
-    <a href="text.html" class="">Text</a>
-    <a href="about.html" class="active">About</a>
-    <a href="contact.html" class="">Contact</a>
-  </nav>
+  <div class="hd-right">
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="ja" aria-pressed="true">JA</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
 </header>
 
-<!-- <div class="note">04 · ABOUT — Same grammar as Hamada's About. Portrait photo + a short bio, keeping information minimal.</div> -->
-<section id="about"><div class="wrap">
-  <div class="portrait"><img src="./img/profile.jpg" alt="Hina Niside"></div>
-  <div>
-    <h2 class="serif">About</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, mollitia sunt! Recusandae quam quibusdam veniam tempora eveniet ipsa culpa, dolorum provident nobis illo earum repudiandae quia labore voluptas hic sit.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias porro omnis dolorem a sapiente ratione unde quidem? Nulla nobis incidunt nesciunt ad? Sed exercitationem dignissimos esse a quo! Consectetur, earum.</p>
-  </div>
-</div></section>
+<main>
+  <section id="about">
+    <div class="wrap">
+      <div class="portrait">
+        <img src="img/profile.jpg" data-alt-ja="Hina Niside のポートレート" data-alt-en="Portrait of Hina Niside" alt="Hina Niside のポートレート">
+      </div>
+
+      <div>
+        <h1 class="page-title serif"><span class="hl"><span class="t-ja">プロフィール</span><span class="t-en">About</span></span></h1>
+        <p class="who serif"><span class="t-ja">西出 妃那　</span>Hina Niside</p>
+
+        <p class="t-ja">クラシックを基盤に作曲を学び、ヤマハジュニア創作研究コースにて研鑽を積む。第42回全日本ジュニアクラシック音楽コンクール全国大会 作曲ソロ部門では、「主題と変奏」を自作自演で演奏し第3位。現在は桐朋学園大学作曲科4年に在学。桐朋学園 第46回作曲作品展にて「Quatre Mouvements 〜木管五重奏のための〜」を発表した。</p>
+        <p class="t-ja">学内演奏会やワークショップ等を通して、室内楽からオーケストラまで幅広く作品を発表。現在は劇伴作曲家として活動し、映像作品を中心に音楽制作を行っている。</p>
+
+        <p class="t-en">Hina Niside studied composition on a foundation of classical music and trained in the Creative Research Course at Yamaha Junior. At the 42nd All Japan Junior Classical Music Competition national finals, she won third prize in the composition solo division, performing her own “Theme and Variations.” She is currently in her fourth year in the Composition Department at Toho Gakuen School of Music, and presented “Quatre Mouvements — for Woodwind Quintet” at the 46th Toho Gakuen Composition Exhibition.</p>
+        <p class="t-en">Through university concerts and workshops she has presented works ranging from chamber music to orchestra. She now works as a composer for screen, writing music mainly for film and video productions.</p>
+
+        <h2 class="sec-title sub serif"><span class="t-ja">作曲分野</span><span class="t-en">Composition</span></h2>
+        <ul class="pill-list">
+          <li><span class="t-ja">劇伴音楽</span><span class="t-en">Screen &amp; incidental music</span></li>
+          <li><span class="t-ja">ポップス</span><span class="t-en">Pop</span></li>
+          <li><span class="t-ja">クラシック（室内楽・オーケストラ等）</span><span class="t-en">Classical (chamber music, orchestra, etc.)</span></li>
+        </ul>
+        <p class="note-line"><span class="t-ja">調性音楽から無調音楽まで、幅広く作曲します。</span><span class="t-en">Composing across the range from tonal to atonal music.</span></p>
+
+        <h2 class="sec-title sub serif"><span class="t-ja">その他</span><span class="t-en">Other</span></h2>
+        <ul class="pill-list soft">
+          <li>MIX</li>
+          <li><span class="t-ja">譜面制作可（Finale, Dorico）</span><span class="t-en">Score engraving (Finale, Dorico)</span></li>
+        </ul>
+
+        <h2 class="sec-title sub serif"><span class="t-ja">経歴・活動</span><span class="t-en">Background &amp; Activity</span></h2>
+        <div class="rows">
+          <div class="row">
+            <div class="k"><span class="t-ja">受賞</span><span class="t-en">Award</span></div>
+            <div class="v">
+              <span class="t-ja">第42回 全日本ジュニアクラシック音楽コンクール 全国大会 作曲ソロ部門 第3位<small>「主題と変奏」（自作自演）</small></span>
+              <span class="t-en">3rd prize, Composition Solo Division — 42nd All Japan Junior Classical Music Competition, National Finals<small>“Theme and Variations” (performed by the composer)</small></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="k"><span class="t-ja">発表</span><span class="t-en">Presented</span></div>
+            <div class="v">
+              <span class="t-ja">桐朋学園 第46回作曲作品展<small>「Quatre Mouvements 〜木管五重奏のための〜」</small></span>
+              <span class="t-en">46th Toho Gakuen Composition Exhibition<small>“Quatre Mouvements — for Woodwind Quintet”</small></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="k"><span class="t-ja">学び</span><span class="t-en">Study</span></div>
+            <div class="v">
+              <span class="t-ja">ヤマハジュニア 創作研究コース／桐朋学園大学 作曲科（4年在学）</span>
+              <span class="t-en">Yamaha Junior, Creative Research Course / Toho Gakuen School of Music, Composition Department (4th year)</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="k"><span class="t-ja">活動</span><span class="t-en">Activity</span></div>
+            <div class="v">
+              <span class="t-ja">学内演奏会・ワークショップ等で、室内楽からオーケストラまで作品を発表</span>
+              <span class="t-en">Chamber and orchestral works presented at university concerts and workshops</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="k"><span class="t-ja">現在</span><span class="t-en">Now</span></div>
+            <div class="v">
+              <span class="t-ja">劇伴作曲家として、映像作品を中心に音楽制作を行う</span>
+              <span class="t-en">Composing for screen, mainly film and video productions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>© 2026 Hina Niside</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
