@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-ja="Hina Niside" data-en="Hina Niside">Hina Niside</title>
-<meta name="description" content="作曲家 Hina Niside（西出 妃那）のオフィシャルサイト。劇伴音楽・ポップス・クラシックを手がける。">
+<title data-ja="Hina Nishide" data-en="Hina Nishide">Hina Nishide</title>
+<meta name="description" content="作曲家 Hina Nishide（西出 妃那）のオフィシャルサイト。劇伴音楽・ポップス・クラシックを手がける。">
 <link rel="icon" href="img/favicon_3.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=14">
 <script>
   /* decide the language before first paint: ?lang=en > saved choice > Japanese */
   (function(){var l='ja',m=location.search.match(/[?&]lang=(ja|en)/);
-  try{if(m){l=m[1];}else{var s=localStorage.getItem('lang');if(s==='en'||s==='ja'){l=s;}}}catch(e){if(m){l=m[1];}}
+  try{if(m){l=m[1];}else{var s=sessionStorage.getItem('lang');if(s==='en'||s==='ja'){l=s;}}}catch(e){if(m){l=m[1];}}
   document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;})();
   /* loading screen: first visit of a session, and on reload */
   try{var n=performance.getEntriesByType('navigation')[0];var rl=n&&n.type==='reload';
@@ -25,7 +25,7 @@
 <div id="loader" aria-hidden="true"><img src="img/favicon_3.jpg" alt=""></div>
 
 <header>
-  <a class="logo serif" href="index.html">HINA NISIDE</a>
+  <a class="logo serif" href="index.html">HINA NISHIDE</a>
   <div class="hd-right">
     <nav aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
@@ -42,7 +42,7 @@
 
 <main>
   <section id="hero" aria-label="Featured">
-    <h1 class="sr-only">Hina Niside — <span class="t-ja">作曲家</span><span class="t-en">Composer</span></h1>
+    <h1 class="sr-only">Hina Nishide — <span class="t-ja">作曲家</span><span class="t-en">Composer</span></h1>
 
     <!-- Full-screen muted looping video (clip from the Piano Trio Sonata). -->
     <div class="slide on">
@@ -75,8 +75,8 @@
   </section>
 </main>
 
-<footer>© 2026 Hina Niside</footer>
+<footer>© 2026 Hina Nishide</footer>
 
-<script src="js/main.js?v=10"></script>
+<script src="js/main.js?v=14"></script>
 </body>
 </html>

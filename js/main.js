@@ -1,9 +1,15 @@
-/* Hina Niside — site script
+/* Hina Nishide — site script
    1. JA/EN switch  2. hero slideshow  3. lightbox  4. contact form */
 (function () {
   'use strict';
   var doc = document, root = doc.documentElement;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- always start at the top of a page (also on back/forward) ---------- */
+  var toTop = function () { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); };
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (!location.hash) toTop();
+  window.addEventListener('pageshow', function (e) { if (e.persisted && !location.hash) toTop(); });
 
   /* ---------- 0. loading screen (home): logo, then fade ---------- */
   var loader = doc.getElementById('loader');
@@ -59,7 +65,7 @@
   [].forEach.call(doc.querySelectorAll('[data-set-lang]'), function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-set-lang');
-      try { localStorage.setItem('lang', lang); } catch (e) {}
+      try { sessionStorage.setItem('lang', lang); } catch (e) {}
       applyLang(lang);
     });
   });

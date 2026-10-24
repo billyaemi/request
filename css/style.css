@@ -1,5 +1,5 @@
 /* ==========================================================
-   Hina Niside — shared stylesheet
+   Hina Nishide — shared stylesheet
    Colors: navy #42495c (ink) / cream #fefac2 (accent)
    Hover motion: all hover transitions use --ease and 0.6–1.4s,
    so things open slowly instead of snapping. Change --ease or
@@ -452,3 +452,7 @@ body.has-np footer{padding-bottom:84px;}
 @keyframes loader-failsafe{to{opacity:0; visibility:hidden;}}
 @media (prefers-reduced-motion:reduce){#loader img{animation:none; opacity:1; transform:none;}}
 html.no-loader #loader{display:none;}
+
+/* about: block centred on the page, text left-aligned inside */
+#about .ab{margin:0 auto; max-width:640px; padding:150px 28px 120px;}
+@media (max-width:760px){#about .ab{padding:150px 20px 90px; margin:0 auto;}}
