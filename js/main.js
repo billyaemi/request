@@ -230,6 +230,12 @@
         if (cur !== tr) tr.querySelector('.tm').textContent = tr._dur;
       });
     });
+    np.querySelector('.np-close').addEventListener('click', function () {
+      au.pause();
+      if (cur) { reset(cur); cur = null; }
+      np.classList.remove('show', 'playing');
+      doc.body.classList.remove('has-np');
+    });
     npWf.addEventListener('click', function (e) { seekTo(e, npWf); });
     np.querySelector('.np-play').addEventListener('click', function () { au.paused ? au.play() : au.pause(); });
     np.querySelector('.np-prev').addEventListener('click', function () { step(-1); });
