@@ -39,24 +39,10 @@
   <section id="hero" aria-label="Featured">
     <h1 class="sr-only">Hina Niside — <span class="t-ja">作曲家</span><span class="t-en">Composer</span></h1>
 
-    <!-- Full-screen images. object-position picks which part of the image stays in frame. -->
+    <!-- Full-screen muted looping video (clip from the Piano Trio Sonata). -->
     <div class="slide on">
-      <img class="cover" src="img/works/fafner.jpg" style="object-position:50% 78%"
-           data-alt-ja="蒼穹のファフナー Symphony Orchestra Concert 2026 キービジュアル"
-           data-alt-en="Key visual: Fafner in the Azure Symphony Orchestra Concert 2026"
-           alt="蒼穹のファフナー Symphony Orchestra Concert 2026 キービジュアル">
-      <p class="cap">蒼穹のファフナー Symphony Orchestra Concert, 2026</p>
-    </div>
-    <div class="slide">
-      <img class="cover" src="img/works/defonima.jpg" style="object-position:50% 14%"
-           data-alt-ja="デフォニマ キービジュアル" data-alt-en="Defonima key visual"
-           alt="デフォニマ キービジュアル">
-      <p class="cap">Defonima / デフォニマ</p>
-    </div>
-
-    <div class="dots">
-      <button type="button" aria-label="Slide 1" aria-current="true"></button>
-      <button type="button" aria-label="Slide 2" aria-current="false"></button>
+      <video class="cover" src="video/hero.mp4" poster="video/hero.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <p class="cap"><span class="t-ja">ピアノ三重奏のためのソナタ</span><span class="t-en">Sonata for Piano Trio</span></p>
     </div>
   </section>
 
@@ -67,19 +53,17 @@
         <a class="more" href="works.html"><span class="t-ja">すべて見る</span><span class="t-en">View all</span></a>
       </div>
       <div class="g">
-        <button class="cell poster" type="button" data-img="img/works/fafner.jpg">
-          <img src="img/works/fafner.jpg" loading="lazy"
-               data-alt-ja="蒼穹のファフナー Symphony Orchestra Concert 2026" data-alt-en="Fafner in the Azure Symphony Orchestra Concert 2026" alt="蒼穹のファフナー Symphony Orchestra Concert 2026">
-          <span class="cap">蒼穹のファフナー Symphony Orchestra Concert 2026</span>
-        </button>
-        <button class="cell poster" type="button" data-img="img/works/defonima.jpg">
-          <img src="img/works/defonima.jpg" loading="lazy"
-               data-alt-ja="デフォニマ" data-alt-en="Defonima" alt="デフォニマ">
-          <span class="cap">Defonima / デフォニマ</span>
+        <button class="cell vid" type="button" data-video="video/sonata.mp4">
+          <img src="video/hero.jpg" loading="lazy" alt="">
+          <span class="cap"><span class="t-ja">ピアノ三重奏のためのソナタ</span><span class="t-en">Sonata for Piano Trio</span></span>
         </button>
         <button class="cell yt" type="button" data-yt="ErIuyZueXoM" data-start="1800">
           <img src="https://i.ytimg.com/vi/ErIuyZueXoM/hqdefault.jpg" loading="lazy" alt="">
           <span class="cap"><span class="t-ja">クラシック作品 01</span><span class="t-en">Classical work 01</span></span>
+        </button>
+        <button class="cell yt" type="button" data-yt="0Axq09tgttU">
+          <img src="https://i.ytimg.com/vi/0Axq09tgttU/hqdefault.jpg" loading="lazy" alt="">
+          <span class="cap"><span class="t-ja">クラシック作品 02</span><span class="t-en">Classical work 02</span></span>
         </button>
       </div>
     </div>

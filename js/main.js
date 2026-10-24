@@ -53,7 +53,7 @@
 
   /* ---------- 2. hero slideshow ---------- */
   var hero = doc.getElementById('hero');
-  if (hero) {
+  if (hero && hero.querySelectorAll('.dots button').length) {
     var slides = [].slice.call(hero.querySelectorAll('.slide'));
     var dots = [].slice.call(hero.querySelectorAll('.dots button'));
     var idx = 0, timer = null;
@@ -92,7 +92,7 @@
   }
 
   /* ---------- 3. lightbox (YouTube + images) ---------- */
-  var cells = doc.querySelectorAll('.cell[data-yt], .cell[data-img]');
+  var cells = doc.querySelectorAll('.cell[data-yt], .cell[data-img], .cell[data-video]');
   if (cells.length) {
     var lb = doc.createElement('div');
     lb.className = 'lb';
@@ -136,6 +136,9 @@
               : '再生できない場合は、') +
           '<a class="ext" target="_blank" rel="noopener" href="' + ytUrl + '">' +
           (currentLang() === 'en' ? 'open it on YouTube' : 'YouTubeで開く') + '</a></p>';
+      } else if (cell.getAttribute('data-video')) {
+        lastFocus = cell;
+        body.innerHTML = '<video src="' + cell.getAttribute('data-video') + '" controls autoplay playsinline></video>';
       } else {
         var img = cell.querySelector('img');
         body.innerHTML = '<img src="' + cell.getAttribute('data-img') + '" alt="' +
