@@ -5,6 +5,20 @@
   var doc = document, root = doc.documentElement;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- 0. loading screen (home): logo, then fade ---------- */
+  var loader = doc.getElementById('loader');
+  if (loader) {
+    try { sessionStorage.setItem('seen', '1'); } catch (e) {}
+    var t0 = Date.now(), gone = false;
+    var hide = function () {
+      if (gone) return; gone = true;
+      var wait = Math.max(0, 2900 - (Date.now() - t0));   // let the logo settle
+      setTimeout(function () { loader.classList.add('done'); }, wait);
+    };
+    if (doc.readyState === 'complete') hide(); else window.addEventListener('load', hide);
+    setTimeout(hide, 5500);
+  }
+
   /* ---------- 1. language ---------- */
   var PAGE_RE = /^(index|works|about|contact)\.html(#.*)?$/;
 

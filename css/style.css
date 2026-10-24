@@ -434,3 +434,21 @@ body.has-np footer{padding-bottom:84px;}
 .ab-name,.ab-h{font-weight:700;}
 
 #np .np-close{margin-left:4px; padding:10px;}
+
+/* ---- loading screen (home): cream screen, script "H" fades in ---- */
+#loader{
+  position:fixed; inset:0; z-index:100; background:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+  transition:opacity 1s var(--ease), visibility 0s linear 1s;
+  animation:loader-failsafe 0s linear 7s forwards;   /* never get stuck if JS fails */
+}
+#loader img{
+  display:block; width:77px; height:auto; mix-blend-mode:multiply;  /* white of the jpg melts into the cream */
+  opacity:0; transform:translateY(8px) scale(.96);
+  animation:loader-logo 1.9s var(--ease) .3s forwards;
+}
+#loader.done{opacity:0; visibility:hidden; pointer-events:none;}
+@keyframes loader-logo{to{opacity:1; transform:none;}}
+@keyframes loader-failsafe{to{opacity:0; visibility:hidden;}}
+@media (prefers-reduced-motion:reduce){#loader img{animation:none; opacity:1; transform:none;}}
+html.no-loader #loader{display:none;}

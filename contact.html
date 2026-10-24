@@ -9,14 +9,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=10">
 <script>
   (function(){var l='ja',m=location.search.match(/[?&]lang=(ja|en)/);
   try{if(m){l=m[1];}else{var s=localStorage.getItem('lang');if(s==='en'||s==='ja'){l=s;}}}catch(e){if(m){l=m[1];}}
   document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;})();
+  /* loading screen: first visit of a session, and on reload */
+  try{var n=performance.getEntriesByType('navigation')[0];var rl=n&&n.type==='reload';
+  if(sessionStorage.getItem('seen')&&!rl){document.documentElement.className+=' no-loader';}}catch(e){}
 </script>
 </head>
 <body>
+
+<div id="loader" aria-hidden="true"><img src="img/favicon_3.jpg" alt=""></div>
 
 <header>
   <a class="logo serif" href="index.html">HINA NISIDE</a>
@@ -107,6 +112,6 @@
 
 <footer>© 2026 Hina Niside</footer>
 
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=10"></script>
 </body>
 </html>
